@@ -123,9 +123,9 @@ elif app_mode == "🔍 Disease Detection":
     predict_button = st.button("🟢 Predict Disease", disabled=not test_image)
     
     if predict_button:
-        st.snow()
-        st.write("🧠 Analyzing... Please wait.")
-        result_index = model_prediction(test_image)
+        status_text = st.empty()  
+        status_text.write("🧠 Analyzing... Please wait.")  
+        result_index = model_prediction(test_image)  # Run prediction
         
         class_name = [
             'Apple___Apple_scab', 'Apple___Black_rot', 'Apple___Cedar_apple_rust', 'Apple___healthy',
@@ -143,4 +143,7 @@ elif app_mode == "🔍 Disease Detection":
             'Tomato___Target_Spot', 'Tomato___Tomato_Yellow_Leaf_Curl_Virus', 'Tomato___Tomato_mosaic_virus',
             'Tomato___healthy'
         ]
-        st.success(f"🌿 Disease Identified: **{class_name[result_index]}**")
+        
+        disease_name = class_name[result_index]
+        status_text.success(f"🌿 Disease Identified: **{disease_name}**")  
+
