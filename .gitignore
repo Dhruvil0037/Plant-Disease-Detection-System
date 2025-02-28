@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+*.venv
+Pipfile.lock
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Environment variables and secrets
+.env
+*.pem
+*.key
+
+# Compiled C extensions
+*.pyd
+*.so
+*.dll
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Python distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing and coverage reports
+.coverage
+.tox/
+.nox/
+pytest_cache/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+Plant_Diesease_Datasey/
