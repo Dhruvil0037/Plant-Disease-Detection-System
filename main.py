@@ -71,7 +71,7 @@ def model_prediction(test_image):
 st.sidebar.markdown('<p class="sidebar-title">🌱 Plant Disease Detector</p>', unsafe_allow_html=True)
 
 # Sidebar Navigation
-app_mode = st.sidebar.radio("🌿 Navigate", ["🏠 Home", "📌 About", "🔍 Disease Detection"], index=0)
+app_mode = st.sidebar.selectbox("🌿 Navigate", ["🏠 Home", "📌 About", "🔍 Disease Detection"], index=0)
 
 # Home Page
 if app_mode == "🏠 Home":
@@ -91,11 +91,27 @@ if app_mode == "🏠 Home":
 elif app_mode == "📌 About":
     st.title("📌 About the Project")
     st.markdown("""
-        ### Dataset Information
-        - 87K RGB images of healthy & diseased leaves.
+        ## Project Overview
+        This project is a **Plant Disease Detection System** developed using **Deep Learning** to identify and classify plant diseases based on leaf images.
+
+        ## About the Creator
+        **Dhruvil Dhamecha**  
+        - Final year student (Semester 7) pursuing a Bachelor's degree in Information Technology.  
+        - Full Stack Developer  , [Visit my portfolio](https://dhruvilportfolio.vercel.app/)
+        - Passionate about AI, Deep Learning, and Computer Vision.  
+        - Developed this project as part of my academic journey.
+
+        ## Dataset Information
+        - Contains **87K RGB images** of both healthy and diseased leaves.
         - Categorized into **38 different classes**.
         - Dataset split: **80% Training, 20% Validation**.
+        - Source: [Kaggle Dataset](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset)
+
+        ## Project Code
+        - **Training Model**: `Train_plant_disease.ipynb`
+        - **Main Application Code**: `main.py`
     """)
+
 
 # Disease Detection Page
 elif app_mode == "🔍 Disease Detection":
